@@ -1,3 +1,4 @@
+{%load tailwind_css%}
 {%load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +11,7 @@
         {% endblock %}
     </title>
     <link rel="stylesheet" href="{% static 'style.css'%}">
+    {% tailwind_css %}
 </head>
 <body>
   <nav>This is navbar</nav>
