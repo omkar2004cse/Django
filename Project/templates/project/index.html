@@ -1,4 +1,5 @@
 {% load static %}
+{% load tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% tailwind_css %}
 </head>
 <body>
-    <h1>Django/Home page</h1>
+    <h1 class="bg-orange-300">Django/Home page</h1>
 </body>
 </html>
