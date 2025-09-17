@@ -22,6 +22,7 @@
     --color-fuchsia-600: oklch(59.1% 0.293 322.896);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-black: #000;
+    --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-5xl: 3rem;
@@ -226,8 +227,14 @@
   .flex {
     display: flex;
   }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
   .h-screen {
     height: 100vh;
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
   }
   .items-center {
     align-items: center;
@@ -310,6 +317,9 @@
   }
   .text-fuchsia-500 {
     color: var(--color-fuchsia-500);
+  }
+  .text-fuchsia-600 {
+    color: var(--color-fuchsia-600);
   }
   .text-shadow-fuchsia-600 {
     --tw-text-shadow-color: oklch(59.1% 0.293 322.896);
