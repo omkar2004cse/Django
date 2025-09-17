@@ -1,23 +1,29 @@
 {%load static %}
-{%load tailwind_tags%}
+{% load tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-       APP
-    </title>
-    <link rel="stylesheet" href="{% static 'app.css'%}">
-    {% tailwind_css%}
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/app.css">
+    {% tailwind_css %}
 </head>
-<body class="bg-amber-200">
-  <nav class='text-blue-600 bg-green-500'>This is navbar</nav>
-<h1 class='text-fuchsia-600'>This is APP Page</h1>
-<div class="app-items">
-  <img src="{% static 'app.image.url' %}" alt="Django Logo" class="w-32 h-32">
-  <img src="{% static 'images/tailwind.png' %}" alt="Tailwind CSS Logo" class="w-32 h-32">  
-
+<body>
+    <h3 class="bg-emerald-500 m-2 rounded-lg"> Welcome in App </h3>
+<div class=" grid grid-cols-3 m-2 bg-amber-950 text-white p-4 rounded-lg">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>  
+    <a href="{% url 'contact' %}">Contact</a> 
 </div>
+<div class="grid grid-cols-3 gap-4 m-4">
+    <div class="bg-blue-700 p-5 rounded">
+        <img src="{% static 'image/image.png'%}" alt="" class="rounded shadow-lg">
+        <h3 class="text-2xl font-bold">Course</h3>
+        <a href="#">
+            <button>Enroll Now</button>
+        </a>
+    </div>
+</div>    
 </body>
 </html>
