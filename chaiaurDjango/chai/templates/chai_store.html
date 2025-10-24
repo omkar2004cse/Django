@@ -1,0 +1,12 @@
+{% extends 'layout.html'%}
+
+{%block content%}
+chai 
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="border-2">
+        search store
+    </button>
+</form>
+{%endblock%}
