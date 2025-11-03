@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block tilte %}
+Register Form
+{% endblock %}
+
+{% block content %}
+
+<h2 class="text-center">
+    Register Here
+</h2>
+<form method="post">
+{% csrf_token %}
+{{form.as_p}}
+<button class="btn btn-primary">
+    Register
+</button>
+</form>
+<p> Already have an Account? <a href="{% url 'login' %}"><button class="btn btn-secondary">Login Here</button></a></p>
+{% endblock %}

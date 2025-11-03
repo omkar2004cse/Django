@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block tilte %}
+Logout Form
+{% endblock %}
+
+{% block content %} 
+<h2 class="text-center">
+    Are you sure you want to logout?
+</h2>
+<p> You have been logged out successfully. <a href="{% url 'login' %}"><button class="btn btn-secondary">Login Again</button></a></p>
+{% endblock %}
