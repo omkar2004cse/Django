@@ -5,15 +5,13 @@ Tweet App
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center mt-4">Tweet Delete</h1>
-<h2 class="text-center"> Are you sure that you want to delete the Tweet</h1>
+{% comment %} <h1 class="text-center mt-4">Tweet Delete</h1> {% endcomment %}
+<h2 class="text-center"> Are you sure that you want to delete the Tweet?</h2>
+
     <form method="post">
         {% csrf_token %}
-        <button class="btn btn-danger">Delete</button>
-        <a href="{%url "tweet_list"%}">
-        <button class=
-        "btn btn-primary">
-        Cancel
-        </button>
+        <button type="submit" class="btn btn-danger">Delete</button>
     </form>
+
+    <a href="{% url 'tweet_list' %}" class="btn btn-primary">Cancel</a>
 {% endblock %}

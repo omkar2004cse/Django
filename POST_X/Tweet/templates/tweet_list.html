@@ -5,11 +5,11 @@ Tweet List
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center mt-4">Tweet List</h1>
-<a class=" btn btn-primary mb-4" href="{% url 'tweet_create' %}">Create a Tweet </a>
+{% comment %} <h1 class="text-center mt-4">Tweet List</h1> {% endcomment %}
+<a class=" btn btn-primary m-4" href="{% url 'tweet_create' %}">Create a Tweet </a>
 <div class="container row gap-3">
     {% for tweet in tweets %}
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 15rem;">
     <img src="{{tweet.photo.url}}" class="card-img-top" alt="...">
     <div class="card-body">
     <h5 class="card-title">{{tweet.user.username}}</h5>
